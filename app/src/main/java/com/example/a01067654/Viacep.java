@@ -1,4 +1,6 @@
-package viacep;
+package com.example.a01067654;
+
+import android.os.Bundle;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -29,30 +31,32 @@ public class Viacep {
         this.Ibge = null;
     }
 
-    public Viacep(String cep) throws ViaCEPException, JSONException {
-        this.buscar(cep);
+    public Viacep(String CEP) throws ViaCEPException, JSONException {
+        this.buscar(CEP);
     }
 
     public final void buscar(String cep) throws ViaCEPException, JSONException {
-        this.CEP = cep;
+        this.CEP = CEP;
 
-        String url = "http://viacep.com.br/ws/" + cep + "/json/";
-        JSONObject obj = new JSONObject(this.get(url));
+        String url = "http://viacep.com.br/ws/" + CEP + "/json/";
 
-        if (!obj.has("erro")) {
-            this.CEP = obj.getString("cep");
-            this.Logradouro = obj.getString("logradouro");
-            this.Complemento = obj.getString("complemento");
-            this.Bairro = obj.getString("bairro");
-            this.Localidade = obj.getString("localidade");
-            this.Uf = obj.getString("uf");
-            this.Ibge = obj.getString("ibge");
-        } else {
-            throw new ViaCEPException("Não foi possível encontrar o CEP", cep);
-        }
+        try {
+            JSONObject obj = new JSONObject(this.get(url));
+            if (!obj.has("erro")) {
+                this.CEP = obj.getString("cep");
+                this.Logradouro = obj.getString("logradouro");
+                this.Complemento = obj.getString("complemento");
+                this.Bairro = obj.getString("bairro");
+                this.Localidade = obj.getString("localidade");
+                this.Uf = obj.getString("uf");
+                this.Ibge = obj.getString("ibge");
+            } else {
+                throw new ViaCEPException("Não foi possível encontrar o CEP", CEP);
+            }
+        }catch (Exception e){}
     }
 
-    public String getCep() {
+    public String getCEP() {
         return this.CEP;
     }
 

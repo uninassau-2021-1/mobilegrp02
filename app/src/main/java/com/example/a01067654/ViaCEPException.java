@@ -1,4 +1,4 @@
-package viacep;
+package com.example.a01067654;
 
 public class ViaCEPException extends Exception {
     private String CEP;

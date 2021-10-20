@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/et_CEP"
+        android:id="@+id/ZipCode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -27,16 +27,8 @@
         android:text="Pesquisar"
 
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/et_CEP"
+        app:layout_constraintStart_toEndOf="@+id/ZipCode"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <com.google.android.gms.maps.MapView
-        android:id="@+id/mapView"
-        android:layout_width="384dp"
-        android:layout_height="355dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/tv_rua"
@@ -74,7 +66,7 @@
         android:layout_marginTop="10dp"
         android:text="Complemento"
         app:layout_constraintStart_toEndOf="@+id/tv_rua"
-        app:layout_constraintTop_toBottomOf="@+id/et_CEP" />
+        app:layout_constraintTop_toBottomOf="@+id/ZipCode" />
 
     <TextView
         android:id="@+id/tv_uf"
