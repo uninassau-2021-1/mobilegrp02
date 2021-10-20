@@ -31,7 +31,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tv_rua"
+        android:id="@+id/tv_logra"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="18dp"
@@ -42,21 +42,34 @@
     <TextView
         android:id="@+id/tv_Cidade"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="7dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
         android:text="Cidade"
-        app:layout_constraintStart_toStartOf="@+id/tv_rua"
-        app:layout_constraintTop_toBottomOf="@+id/tv_rua" />
+        app:layout_constraintStart_toEndOf="@+id/tv_bairro"
+        app:layout_constraintTop_toBottomOf="@+id/tv_comp" />
 
     <TextView
-        android:id="@+id/tv_cep"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="7dp"
-        android:text="CEP"
-        app:layout_constraintStart_toStartOf="@+id/tv_comp"
+        android:id="@+id/tv_uf"
+        android:layout_width="0dp"
+        android:layout_height="17dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="241dp"
+        android:text="UF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_Cidade"
         app:layout_constraintTop_toBottomOf="@+id/tv_comp" />
+
+    <TextView
+        android:id="@+id/tv_bairro"
+        android:layout_width="wrap_content"
+        android:layout_height="17dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="10dp"
+        android:text="Bairro"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_logra" />
 
     <TextView
         android:id="@+id/tv_comp"
@@ -65,14 +78,7 @@
         android:layout_marginStart="2dp"
         android:layout_marginTop="10dp"
         android:text="Complemento"
-        app:layout_constraintStart_toEndOf="@+id/tv_rua"
+        app:layout_constraintStart_toEndOf="@+id/tv_logra"
         app:layout_constraintTop_toBottomOf="@+id/ZipCode" />
 
-    <TextView
-        android:id="@+id/tv_uf"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="UF"
-        app:layout_constraintBaseline_toBaselineOf="@+id/tv_cep"
-        app:layout_constraintEnd_toStartOf="@+id/tv_comp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
