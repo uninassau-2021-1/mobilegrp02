@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">01067654</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="senhaLogin">Senha</string>
+    <string name="usuarioLogin">Usuário</string>
+    <string name="loginScreen">Login</string>
 </resources>

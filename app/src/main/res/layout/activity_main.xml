@@ -51,7 +51,7 @@
 
     <TextView
         android:id="@+id/tv_uf"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="17dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
