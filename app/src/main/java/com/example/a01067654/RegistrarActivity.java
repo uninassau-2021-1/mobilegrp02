@@ -1,5 +1,6 @@
 package com.example.a01067654;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -45,6 +46,10 @@ public class RegistrarActivity extends AppCompatActivity {
                     long res = db.CriarUtilizador(usuario,p1);
                     if (res>0){
                         Toast.makeText(getApplicationContext(),"Registro OK",Toast.LENGTH_SHORT).show();
+                        Intent i = new Intent(RegistrarActivity.this, LoginActivity.class);
+                        startActivity(i);
+                    } else{
+                        Toast.makeText(getApplicationContext(),"Registro Inválido",Toast.LENGTH_SHORT).show();
                     }
                 }
             }

@@ -15,38 +15,29 @@ public class MainActivity extends AppCompatActivity {
 
     String urlWebServices = "http://127.0.0.2/phpmyadmin/";
 
-    Button btnLogin;
-    EditText editLogin;
-    EditText editSenha;
+    Button bt_entrar, bt_registrar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_registro_login);
 
-        btnLogin = findViewById(R.id.btnEntrar);
-        editLogin = findViewById(R.id.editLogin);
-        editSenha = findViewById(R.id.editSenha);
+        bt_entrar = findViewById(R.id.bt_entrar);
+        bt_registrar = findViewById(R.id.bt_registrar);
 
-        btnLogin.setOnClickListener(new View.OnClickListener() {
+        bt_entrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                boolean validacampo = true;
+                Intent i = new Intent(MainActivity.this, LoginActivity.class);
+                startActivity(i);
+            }
 
-                if (editLogin.getText().equals("")){
-                    editLogin.setError("Campo Obrigatório");
-                    editLogin.requestFocus();
-                    validacampo = false;
-                }
-                if (editSenha.getText().equals("")){
-                    editSenha.setError("Campo Obrigatório");
-                    editSenha.requestFocus();
-                    validacampo = false;
-                }
-                if (validacampo){
-                    Toast.makeText(getApplicationContext(),"Validando seus dados... aguarde",Toast.LENGTH_SHORT).show();
-                }
-                Intent i = new Intent(MainActivity.this,LoginActivity.class);
+        });
+
+        bt_registrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this, RegistrarActivity.class);
                 startActivity(i);
             }
 

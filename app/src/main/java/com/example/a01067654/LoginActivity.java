@@ -41,13 +41,14 @@ public class LoginActivity extends AppCompatActivity {
                     String res = db.ValidarLogin(usuario,password);
 
                     if (res.equals("Ok")){
-                        Toast.makeText(getApplicationContext(),"Login Ok",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(),"Validando seus dados... aguarde",Toast.LENGTH_SHORT).show();
+                        Intent main1 = new Intent(LoginActivity.this,SgnActivity.class);
+                        startActivity(main1);
                     } else {
                         Toast.makeText(getApplicationContext(),"Login errado, tente novamente",Toast.LENGTH_SHORT).show();
                     }
                 }
-                Intent i = new Intent(LoginActivity.this,MainActivity.class);
-                startActivity(i);
+
 
             }
         });

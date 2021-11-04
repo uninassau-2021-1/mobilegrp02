@@ -4,50 +4,56 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity_registrar">
+    tools:context=".RegistrarActivity">
 
     <EditText
         android:id="@+id/et_reg_username"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="2dp"
-        android:layout_marginBottom="26dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="100dp"
         android:ems="10"
         android:hint="Digite o usuário"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/et_reg_password1"
-        app:layout_constraintStart_toStartOf="@+id/et_reg_password1" />
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="@+id/et_reg_password1"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/bt_registrarnovo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="51dp"
+        android:layout_marginTop="100dp"
         android:text="Registrar"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_reg_password2" />
+        app:layout_constraintTop_toBottomOf="@+id/et_reg_password2"
+        />
 
     <EditText
         android:id="@+id/et_reg_password1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="247dp"
+        android:layout_marginTop="20dp"
         android:ems="10"
         android:inputType="textPassword"
+        android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/et_reg_username" />
 
     <EditText
         android:id="@+id/et_reg_password2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="1dp"
-        android:layout_marginTop="33dp"
+        android:layout_marginTop="20dp"
         android:ems="10"
         android:inputType="textPassword"
+        android:minHeight="48dp"
         app:layout_constraintStart_toStartOf="@+id/et_reg_password1"
-        app:layout_constraintTop_toBottomOf="@+id/et_reg_password1" />
+        app:layout_constraintTop_toBottomOf="@+id/et_reg_password1"
+        tools:ignore="SpeakableTextPresentCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
